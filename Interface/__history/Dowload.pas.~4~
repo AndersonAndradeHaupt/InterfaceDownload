@@ -1,0 +1,50 @@
+unit Download;
+
+interface
+
+uses
+  System.Classes, System.Net.HttpClient, Download.interfaces, System.Net.URLClient, System.Net.HttpClientComponent;
+
+type
+  TFileDownloader = class(TInterfacedObject, iDownload)
+  private
+    HttpClient: TNetHTTPClient;
+  public
+    constructor Create; reintroduce;
+    destructor Destroy; override;
+    procedure Download(const URL, FileName: string);
+  end;
+
+implementation
+
+constructor TFileDownloader.Create;
+begin
+  inherited Create;
+  HttpClient := TNetHTTPClient.Create(nil);
+end;
+
+destructor TFileDownloader.Destroy;
+begin
+  HttpClient.Free;
+  inherited Destroy;
+end;
+
+procedure TFileDownloader.Download(const URL, FileName: string);
+var
+  HttpResponse: IHTTPResponse;
+  FileStream: TFileStream;
+begin
+  FileStream := TFileStream.Create(FileName, fmCreate);
+  try
+    HttpResponse := HttpClient.Get(URL, FileStream);
+    if HttpResponse.StatusCode = 200 then
+      WriteLn('Download concluído com sucesso')
+    else
+      WriteLn('Erro ao baixar o arquivo: ' + HttpResponse.StatusText);
+  finally
+    FileStream.Free;
+  end;
+end;
+
+end.
+

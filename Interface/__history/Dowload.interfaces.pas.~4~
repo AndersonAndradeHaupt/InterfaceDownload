@@ -1,0 +1,16 @@
+unit Dowload.interfaces;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  iDowload = Interface
+  ['{D4E0525A-D8CB-4277-B8D0-F7A2518AC0E3}']
+  procedure Download(const URL, FileName: string);
+end;
+
+implementation
+
+end.

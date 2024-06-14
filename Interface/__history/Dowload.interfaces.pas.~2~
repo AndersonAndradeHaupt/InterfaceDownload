@@ -1,0 +1,15 @@
+unit Dowload.interfaces;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  IDowload = IInterface;
+
+end;
+
+implementation
+
+end.

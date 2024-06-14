@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/06/14 08:58:37.063,=C:\Users\Lorde\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 09:21:39.509,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\UDowload.dfm=C:\Users\Lorde\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/06/14 09:21:39.509,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\UDowload.pas=C:\Users\Lorde\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 09:21:45.831,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Demo_dowload.dproj=C:\Users\Lorde\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2024/06/14 09:21:54.367,=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 09:22:48.543,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\iDowload.pas=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 09:24:24.789,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\Dowload.interfaces.pas=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\iDowload.pas</Transaction>
+    <Transaction>2024/06/14 09:30:50.784,=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 09:31:10.139,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\Dowload.pas=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 10:08:59.109,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\Download.pas=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\Dowload.pas</Transaction>
+    <Transaction>2024/06/14 10:35:34.195,C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\Download.interfaces.pas=C:\Users\Lorde\Desktop\Arquivos Meus\InterfaceDowload\Interface\Dowload.interfaces.pas</Transaction>
+  </Transactions>
+</BorlandProject>

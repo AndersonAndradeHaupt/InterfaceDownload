@@ -1,0 +1,54 @@
+unit UDowload;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Net.URLClient,
+  System.Net.HttpClient, System.Net.HttpClientComponent, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    NetHTTPClient1: TNetHTTPClient;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  HttpClient: TNetHTTPClient;
+  HttpResponse: IHTTPResponse;
+  FileStream: TFileStream;
+  FileName,URL :string;
+begin
+  URL := 'https://nstzd5w9xdrpsoad.public.blob.vercel-storage.com/Logistica-Axmtx7Lkhziu9AtxrVjTtmPEnfS86g.jpg';
+  filename := 'C:\Users\Lorde\Downloads\oi2.jpg';
+  HttpClient := TNetHTTPClient.Create(nil);
+  try
+    FileStream := TFileStream.Create(FileName, fmCreate);
+    try
+      HttpResponse := HttpClient.Get(URL, FileStream);
+      if HttpResponse.StatusCode = 200 then
+        ShowMessage('Download concluído com sucesso')
+      else
+        ShowMessage('Erro ao baixar o arquivo: ' + HttpResponse.StatusText);
+    finally
+      FileStream.Free;
+    end;
+  finally
+    HttpClient.Free;
+  end;
+end;
+
+end.
