@@ -12,12 +12,14 @@ type
     HttpClient: TNetHTTPClient;
     Flink :String;
     Ffilename: string;
+    procedure Setlink(const Value: string);
+    procedure Setfilename(const Value: string);
   public
     class function New: iDownload;
 
     constructor Create;
     destructor Destroy; override;
-    function Download(): Boolean;
+    function Download(const URL, FileName: string): Boolean;
     function link(aLink :string):iDownload;
     function filename(aFilename :string):iDownload;
 
@@ -36,14 +38,14 @@ begin
   inherited Destroy;
 end;
 
-function TDownload.Download(): Boolean;
+function TDownload.Download(const URL, FileName: string): Boolean;
 var
   HttpResponse: IHTTPResponse;
   FileStream: TFileStream;
 begin
-  FileStream := TFileStream.Create(Ffilename, fmCreate);
+  FileStream := TFileStream.Create(FileName, fmCreate);
   try
-    HttpResponse := HttpClient.Get(Flink, FileStream);
+    HttpResponse := HttpClient.Get(URL, FileStream);
     result := (HttpResponse.StatusCode = 200);
   finally
     FileStream.Free;
@@ -67,5 +69,16 @@ begin
   result := self.Create;
 end;
 
+
+
+procedure TDownload.Setfilename(const Value: string);
+begin
+
+end;
+
+procedure TDownload.Setlink(const Value: string);
+begin
+
+end;
 
 end.
