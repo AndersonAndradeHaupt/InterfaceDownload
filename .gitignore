@@ -1,4 +1,2 @@
-# Arquivos e pastas a serem ignorados pelo Git
-
-# Ignorar a pasta Win32
-Win32/
+Demo/Win32
+Demo/Demo_download.res

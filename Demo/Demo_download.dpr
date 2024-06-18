@@ -1,8 +1,8 @@
-program Demo_dowload;
+program Demo_download;
 
 uses
   Vcl.Forms,
-  UDowload in 'UDowload.pas' {Form1},
+  UDownload in 'UDownload.pas' {Form1},
   Download.interfaces in 'Interface\Download.interfaces.pas',
   Download in 'Interface\Download.pas';
 
