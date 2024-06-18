@@ -18,8 +18,8 @@ type
     constructor Create;
     destructor Destroy; override;
     function Download(): Boolean;
-    function link(aLink :string):iDownload;
-    function filename(aFilename :string):iDownload;
+    function Link(aLink :string):iDownload;
+    function Filename(aFilename :string):iDownload;
 
   end;
 
